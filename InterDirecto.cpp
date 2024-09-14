@@ -2,6 +2,12 @@
 using namespace std;
 void interDirder(int arr[], int n)
 {
+	cout<<"Ingrese la cantidad de elementos:"; cin>>n;
+    cout<<endl;
+    for(int i=0; i<n; i++)
+    {
+        cout<<"Ingrese elemento "<<i+1<<": "; cin>>arr[i];
+    }
    
     for(int i=0; i<n-1; i++)
     {
@@ -16,14 +22,22 @@ void interDirder(int arr[], int n)
         }
     }
     cout<<endl;
+    cout<<"forma ordenada: ";
     for(int i=0; i<n; i++)
     {
         cout<<arr[i]<<" ";
     }
     cout<<endl;
+    cout<<endl;
 }
 void interDirizq(int arr[], int m)
 {
+	cout<<"Ingrese la cantidad de elementos:"; cin>>m;
+    cout<<endl;
+    for(int i=0; i<m; i++)
+    {
+        cout<<"Ingrese elemento "<<i+1<<": "; cin>>arr[i];
+    }
     for(int i=0; i<m-1; i++)
     {
         for(int j=m-1; j>i; j--)
@@ -37,14 +51,22 @@ void interDirizq(int arr[], int m)
         }
     }
     cout<<endl;
+    cout<<"forma ordenada: ";
     for(int i=0; i<m; i++)
     {
         cout<<arr[i]<<" ";
     }
     cout<<endl;
+    cout<<endl;
 }
 void interDircen(int arr[], int n)
 {
+	cout<<"Ingrese la cantidad de elementos:"; cin>>n;
+    cout<<endl;
+    for(int i=0; i<n; i++)
+    {
+        cout<<"Ingrese elemento "<<i+1<<": "; cin>>arr[i];
+    }
     int cen=1;
     int i=0;
     while(i<n-1 and cen==1)
@@ -63,14 +85,22 @@ void interDircen(int arr[], int n)
         i++;
     }
     cout<<endl;
+    cout<<"forma ordenada: ";
     for(int i=0; i<n; i++)
     {
         cout<<arr[i]<<" ";
     }
     cout<<endl;
+    cout<<endl;
 }
 void interDirBi(int arr[], int m)
 {
+	cout<<"Ingrese la cantidad de elementos:"; cin>>m;
+    cout<<endl;
+    for(int i=0; i<m; i++)
+    {
+        cout<<"Ingrese elemento "<<i+1<<": "; cin>>arr[i];
+    }
     int izq=0;
     int der=m-1;
     int k;
@@ -101,22 +131,19 @@ void interDirBi(int arr[], int m)
         der--;
     }
     cout<<endl;
+    cout<<"forma ordenada: ";
     for(int i=0; i<m; i++)
     {
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
     cout<<endl;
 }
 
 int main()
 {
     int op, x[100], n;
-    cout<<"ingrese la cantidad de elementos:"; cin>>n;
-    cout<<endl;
-    for(int i=0; i<n; i++)
-    {
-        cout<<"ingrese un numero:"; cin>>x[i];
-    }
+    
     bool salir=false;
     do
     {
