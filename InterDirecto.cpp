@@ -69,6 +69,44 @@ void interDircen(int arr[], int n)
     }
     cout<<endl;
 }
+void interDirBi(int arr[], int m)
+{
+    int izq=0;
+    int der=m-1;
+    int k;
+    while(izq<=der)
+    {
+        k=izq;
+        for(int i=der; i>izq; i--)
+        {
+            if(arr[i-1]>arr[i])
+            {
+                int aux=arr[i-1];
+                arr[i-1]=arr[i];
+                arr[i]=aux;
+                k=i;
+            }
+        }
+        izq++;
+        for(int i=izq; i<der; i++)
+        {
+            if(arr[i]>arr[i+1])
+            {
+                int aux=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=aux;
+                k=i;
+            }
+        }
+        der--;
+    }
+    cout<<endl;
+    for(int i=0; i<m; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
 
 int main()
 {
@@ -93,12 +131,11 @@ int main()
             case 1:interDirder(x, n); break;
             case 2:interDirizq(x, n); break;
             case 3:interDircen(x,n); break;
+            case 4:interDirBi(x,n); break;
             case 5:salir=true; break;
-            default:
-                break;
+            default:break;
         }
 
-        
     } while (!salir);
     return 0;
 
