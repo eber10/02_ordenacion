@@ -22,6 +22,28 @@ void interDirder(int arr[], int n)
     }
     cout<<endl;
 }
+void interDirizq(int arr[], int m)
+{
+    for(int i=0; i<m-1; i++)
+    {
+        for(int j=m-1; j>i; j--)
+        {
+            if(arr[j]<arr[j-1])
+            {
+                int aux=arr[j-1];
+                arr[j-1]=arr[j];
+                arr[j]=aux;
+            }
+        }
+    }
+    cout<<endl;
+    for(int i=0; i<m; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
+
 
 int main()
 {
@@ -45,8 +67,8 @@ int main()
         {
             case 1:interDirder(x, n);
                 break;
-            case 5:
-                salir=true;
+            case 2:interDirizq(x, n); break;
+            case 5:salir=true;
                 break;
             default:
                 break;
